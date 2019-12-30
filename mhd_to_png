@@ -34,24 +34,6 @@ label_mhd_folder_path = "./MHD_labels/"
 # Labels output folder path
 label_png_folder_path = "./PNG_labels/"
 
-h = 64
-w = 64
-v = 100
-
-ar = np.full((h, w), 155 * 255, dtype=np.uint16)
-# im = Image.fromarray(ar, 'I;16')
-# im.save('foo.png')
-cv2.imwrite('foo.png', ar)
-
-# im = Image.open('foo.png')
-# d = np.array(im.getdata())
-# print(d, d.shape)
-# im2 = Image.fromarray(d, 'RGB')
-# im2.save('foo2.png')
-
-a = np.array(cv2.imread('foo.png', cv2.IMREAD_ANYDEPTH), dtype=np.uint16)
-print(a)
-
 sample_png_folders = [x for x in os.listdir(sample_mhd_folder_path) if ".mhd" in x.lower()]
 label_png_folders = [x for x in os.listdir(label_mhd_folder_path) if ".mhd" in x.lower()]
 print(label_png_folders)
