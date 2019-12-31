@@ -120,5 +120,5 @@ for screen_num, (sample_png_folder, label_png_folder) in enumerate(zip(sample_pn
                                                                                   'all_points_y': y_list},
                                                              'region_attributes': {}}
 
-            with open(os.path.join(result_folder, 'via_region_data.json'), 'w+') as outfile:
-                json.dump(json_data, outfile)
+        with open(os.path.join(result_folder, 'via_region_data.json'), 'w+') as outfile:
+            json.dump(json_data, outfile)
